@@ -10,4 +10,5 @@ import { Searchbar } from './searchbar/searchbar';
 })
 export class App {
   protected title = '9th_quarter_app';
+
 }
