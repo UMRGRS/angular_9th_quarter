@@ -8,8 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class Tiendas {
-  @Input() public store: string = "";
-  @Input() public store_logo: string = "";
-  @Input() public store_link: string = "";
+  @Input({required:true}) public store: string = "";
+  @Input({required:true}) public store_logo: string = "";
+  @Input({required:true}) public store_link: string = "";
 
 }
