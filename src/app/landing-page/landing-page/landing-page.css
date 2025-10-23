@@ -1,0 +1,18 @@
+.tiendas-container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-end;   
+  gap: 20px;      
+  height: 90%;      
+  padding-bottom: 10px;    
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .tiendas-container {
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+  }
+}

@@ -1,32 +1,56 @@
+:host {
+  display: inline-block; /* keeps it sized to content and plays well inside the parent flex container */
+}
+.tienda_card {
+  display: inline-flex;
+  align-items: center;
+  max-width: 400px;
+  /*margin: 10px; */
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff0000 0%, #000000 100%);
+  box-shadow: 4px 4px 0px #000, 6px 6px 0px #fff;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+  transform: skew(-5deg);
+}
+.tienda_card:hover {
+    background: linear-gradient(135deg, black 0%, red 100%);
+    border-color: red;
+}
 
-    .tienda_card {
-      display:inline-flex;
-      gap: 16px;
-      align-items: center;
-      border: 4px solid black;
-      border-radius: 25px;
-      padding: 16px;
-      margin: 10px;
-      width: 40%;
-      background: #FF0505;
-    }
+.tienda_image {
+  padding: 3px;
+  border: 4px solid black;
+  height: 20%;
+  width: 20%;
+  background-color: white;
+  border-radius: 10px;
+  transform: skew(5deg);
+}
 
-    .tienda_image {
-      padding: 3px;
-      border: 4px solid black;
-      height: 20%;
-      width: 20%;
-      background-color: white;
-      border-radius: 10px;
-    }
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.tienda_text_div{
+  padding: 3%;
+}
 
-    .tienda_text {
-      flex: 1; 
-    }
+.tienda_text {
+  flex: 1; 
+  color: white;
+  text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000,
+            -3px 0px 0 #000,
+            3px 0px 0 #000,
+            0px -3px 0 #000,
+            0px 3px 0 #000;
+}
 
