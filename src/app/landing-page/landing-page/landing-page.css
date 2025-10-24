@@ -30,8 +30,11 @@
 }
 
 .banner{
-    justify-content: center; 
-    display: flex;
     background-color: black;
-    padding: 10px;
+
+}
+
+body{
+    background-image: url('/assets/bg-ai.png');
+    background-repeat: repeat-x;
 }
