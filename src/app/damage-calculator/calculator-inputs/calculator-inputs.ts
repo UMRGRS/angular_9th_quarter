@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DropdownSelector } from "../dropdown-selector/dropdown-selector";
-import { SelectorOptions } from '../interfaces/selector-options';
+import { BaseOption } from '../../global/interfaces/base-option';
 
 @Component({
   selector: 'app-calculator-inputs',
@@ -13,11 +13,11 @@ export class CalculatorInputs {
   // Wrap every output change in an single object
   // Pass object to parent
   // Input options/labels in a single object and create dropdowns dynamically
-  options: SelectorOptions[] = [{value: 'owo', label: 'OwO'}, {value: 'uwu', label: 'UwU'},  {value: 'ewe', label: 'EwE'}];
+  options: BaseOption[] = [{uid: 'owo', name: 'OwO', image:""}, {uid: 'uwu', name: 'UwU', image:""}, {uid: 'ewe', name: 'EwE', image:""}];
 
-  selected_option: SelectorOptions | null = null;
+  selected_option: BaseOption | null = null;
 
-  onOptionSelected(value: SelectorOptions) {
+  onOptionSelected(value: BaseOption) {
     this.selected_option = value;
   }
 
