@@ -1,7 +1,7 @@
-<form [formGroup]="selector_form" class="mb-2">
-    <label for="selector" class="mx-2">{{label}}</label>
-    <select id="selector" formControlName="option">
-        <option value="null">None</option>
+<form [formGroup]="selector_form" class="mb-2 form">
+    <label for="selector" class="mx-2 enemigo">{{label}}</label>
+    <select class="dropdown" id="selector" formControlName="option">
+        <option hidden value="null"></option>
         @for (option of options; track $index) {
         <option [ngValue]="option">{{option.label}}</option>
         }
