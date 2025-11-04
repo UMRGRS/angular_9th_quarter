@@ -1,10 +1,11 @@
-import { SelectorOptions } from "./selector-options";
+import { BaseOption } from "../../global/interfaces/base-option";
+
 
 export interface CalculatorInput {
-    item_one?: SelectorOptions,
-    item_two?: SelectorOptions,
-    item_three?: SelectorOptions,
-    item_four?: SelectorOptions,
-    item_five?: SelectorOptions,
-    item_six?: SelectorOptions,
+    item_one?: BaseOption,
+    item_two?: BaseOption,
+    item_three?: BaseOption,
+    item_four?: BaseOption,
+    item_five?: BaseOption,
+    item_six?: BaseOption,
 }

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { UserData } from '../../interfaces/user-data';
 import { EquipmentData } from '../../interfaces/equipment-data';
 import { EnemiesData } from '../../interfaces/enemies-data';
-import { DocumentData, DocumentSnapshot } from '@angular/fire/firestore';
+import {Firestore} from '@angular/fire/firestore';
+import { collection, doc, DocumentData, DocumentSnapshot, getDoc, getDocs, limit, orderBy, query, where } from 'firebase/firestore';
 import { EquipmentType } from '../../enums/equipment-type';
 
 @Injectable({
@@ -10,8 +11,10 @@ import { EquipmentType } from '../../enums/equipment-type';
 })
 export class ReadDocuments {
 
-  public async getUser(uid: string):Promise<UserData | null>{
-    var document = await this.readUserFromFirestore(uid);
+  constructor(private firestore: Firestore) {}
+
+  public async getUser(username: string):Promise<UserData | null>{
+    var document = await this.readUserFromFirestore(username);
     return document ? this.createUserFromFirestore(document) :null;
   }
 
@@ -51,23 +54,61 @@ export class ReadDocuments {
     } as EnemiesData;
   }
 
-  private async readUserFromFirestore(uid: string):Promise<DocumentSnapshot<DocumentData> | null>{
-     // TODO: implement Firestore query here
-     throw new Error('Method not implemented.');
+  private async readUserFromFirestore(username: string):Promise<DocumentSnapshot<DocumentData> | null>{
+    const q = query(
+      collection(this.firestore, 'users'), 
+      where("username", "==", username), 
+      limit(1)
+    );
+    const query_snapshot = await getDocs(q);
+    
+    if(!query_snapshot.empty){
+      return query_snapshot.docs[0];
+    }
+
+    return null;
   }
 
   private async readEquipmentFromFireStore(uid: string):Promise<DocumentSnapshot<DocumentData> | null>{
-     // TODO: implement Firestore query here
-     throw new Error('Method not implemented.');
+    const equipment_ref = doc(this.firestore, 'equipment', uid);
+
+    const equipment_snapshot = await getDoc(equipment_ref);
+
+    if(equipment_snapshot.exists()){
+      return equipment_snapshot;
+    }
+
+    return null;
   }
 
   private async readEquipmentsListFromFirestore(type:EquipmentType):Promise<Array<DocumentSnapshot<DocumentData>> | null>{
-    // TODO: implement Firestore query here
-     throw new Error('Method not implemented.');
+    const q = query(
+      collection(this.firestore, 'equipment'), 
+      where("type", "==", type.toString()),
+      orderBy("name")
+    );
+
+    const query_snapshot = await getDocs(q);
+    
+    if(!query_snapshot.empty){
+      return query_snapshot.docs;
+    }
+
+    return null;
   }
 
   private async readEnemiesListFromFirestore():Promise<Array<DocumentSnapshot<DocumentData>> | null>{
-    // TODO: implement Firestore query here
-     throw new Error('Method not implemented.');
+    const q = query(
+      collection(this.firestore, 'enemies'), 
+      orderBy("rank")
+    );
+
+    const query_snapshot = await getDocs(q);
+    
+    if(!query_snapshot.empty){
+      return query_snapshot.docs;
+    }
+
+    return null;
   }
 }

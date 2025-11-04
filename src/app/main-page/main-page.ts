@@ -10,6 +10,6 @@ import { DamageCalculator } from "../damage-calculator/damage-calculator";
   templateUrl: './main-page.html',
   styleUrl: './main-page.css'
 })
-export class MainPage {
-
+export class MainPage{
+  
 }
