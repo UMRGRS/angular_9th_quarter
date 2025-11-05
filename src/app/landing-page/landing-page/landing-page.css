@@ -72,20 +72,21 @@ body {
 .out-now,
 .out-now-banner {
   position: absolute;
-  top: -35px;
+  top: -45px;
   left: 20px;
   background: #ff0000;
   color: #fff;
-  font-weight: 800;
-  font-size: 1.2rem;
-  padding: 6px 18px;
-  border-radius: 6px;
-  box-shadow: 2px 2px 0 #000;
+  font-weight: 900; /* el valor máximo realista es 900 */
+  font-size: 1.8rem; /* aumentamos el tamaño de la fuente */
+  padding: 12px 32px; /* más alto y más largo */
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #000;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 1px;
-   transform: skew(-10deg); 
+  font-family: 'P5-menu';
+  letter-spacing: 2px;
+  transform: skew(-10deg);
 }
+
 
 .tiendas-wrapper {
   position: absolute;

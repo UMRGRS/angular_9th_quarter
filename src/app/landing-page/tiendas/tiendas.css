@@ -46,7 +46,6 @@ a {
   gap: 16px;
   padding: 12px 60px;
   background-color: #000;
-  border: 1px solid #fff;
   border-radius: 6px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: none !important;
