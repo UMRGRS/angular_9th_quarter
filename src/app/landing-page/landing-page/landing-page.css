@@ -1,0 +1,126 @@
+/*  Estilos base del documento y fondo principal */
+body, html {
+  margin: 0;
+  padding: 0;
+} 
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/assets/bg-ai.png');
+  background-repeat: repeat;
+  background-size: cover;
+  background-color: black;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/*  Diseño general del layout principal */
+.landing-layout {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 8%;
+}
+
+/*  Imagen principal del personaje */
+.personaje-img {
+  position: absolute;
+  left: 0;                    
+  top: 0;                      
+  height: 100vh;               
+  width: auto;                
+  object-fit: cover;           
+  filter: drop-shadow(6px 6px 0 #000);
+  margin: 0;
+  padding: 0;
+}
+
+/*  Contenedor del buscador */
+.contenedor_buscador {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  overflow: visible; 
+  position: relative;
+  z-index: 10;
+}
+
+/*  Corrección de overflow general */
+body {
+  overflow: visible !important;
+  padding: 0;
+  margin: 0;
+}
+
+/*  Adaptaciones de layout para pantallas menores a 1700px */
+@media (max-width: 1700px) {
+  .landing-layout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 8%;
+    z-index: 10;
+  }
+
+
+}
+
+/*  Banner de lanzamiento "OUT NOW" */
+.out-now,
+.out-now-banner {
+  position: absolute;
+  top: -45px;
+  left: 20px;
+  background: #ff0000;
+  color: #fff;
+  font-weight: 900; 
+  font-size: 1.8rem;
+  padding: 12px 32px; 
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 #000;
+  text-transform: uppercase;
+  font-family: 'P5-menu';
+  letter-spacing: 2px;
+  transform: skew(-10deg);
+}
+
+/*  Contenedor general de la sección de tiendas */
+.tiendas-wrapper {
+  position: absolute;
+  right: 20px;      
+  bottom: 20px;     
+  z-index: 20;
+  display: flex;
+  justify-content: flex-end;  
+  align-items: flex-end;
+  transform: none !important;
+}
+
+/*  Marco que contiene las tarjetas de tiendas */
+.tiendas-frame {
+  background: #000;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 20px 40px;  
+  box-shadow: 6px 6px 0 #000;
+  width: auto;         
+  max-width: 700px;   
+  margin: 0;
+  transform: skew(10deg); 
+}
+
+/*  Contenedor interno de las tarjetas de tiendas */
+.tiendas-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  transform: none !important;
+}
