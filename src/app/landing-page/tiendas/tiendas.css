@@ -1,7 +1,8 @@
+/* Configuración del host del componente */
 :host {
   display: inline-block;
 }
-
+/*  Estilo de la imagen del logotipo */
 .tienda_image {
   width: 40px;
   height: 40px;
@@ -17,7 +18,7 @@
   object-fit: contain;
 }
 
-
+/* Estilo del texto y su contenedor */
 .tienda_text_div {
   display: flex;
   align-items: center;
@@ -33,12 +34,12 @@
   text-shadow: none;
 }
 
-
+/* Enlace */
 a {
   text-decoration: none;
   display: inline-block;
 }
-
+/* Tarjeta principal de la tienda */
 .tienda_card {
   display: flex;
   align-items: center;
