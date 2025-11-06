@@ -1,0 +1,19 @@
+.dropdown{
+    background-color: black;
+    color: white;
+    border-color: white;
+    width: 40%;
+    height: 80%;
+    border-width: 3px;
+    border-style:solid;
+    transform: rotate(1deg);
+}
+
+.enemigo{
+    margin: 4%;
+    font-family: 'P5-menu';
+    font-size:200%;
+    flex: 1; 
+    color: #ffffff;
+    text-shadow:-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, -3px 0px 0 #000, 3px 0px 0 #000, 0px -3px 0 #000, 0px 3px 0 #000;
+}

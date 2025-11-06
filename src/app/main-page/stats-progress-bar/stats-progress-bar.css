@@ -1,0 +1,37 @@
+.stat-box{
+    background-color: #000000;
+    padding: 5%;
+    border-radius: 5px;
+    transform: rotate(3deg);
+    display: grid;
+    place-items: center;
+    display: flex;
+    padding-right: 10%;
+    margin: 2%;
+}
+
+.stat-number{
+    font-family: P5-hatty;
+    font-size:xx-large;
+    color: #000000;
+    background-color: red;
+    padding: 25%;
+    padding-right: 45%;
+    clip-path: polygon(12% 12%, 82% 14%, 75% 37%, 85% 54%, 68% 61%, 59% 82%, 2% 74%);
+}
+
+.stat-number:hover{
+    color: white;
+}
+
+.stat-name{
+    font-family: P5-hatty;
+    font-size:xx-large;
+    color: #ffffff;
+    padding-bottom: 0; 
+    margin-top: 10%;
+}
+
+.stat-name:hover{
+    color: red;
+}
