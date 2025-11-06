@@ -9,5 +9,4 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = '9th_quarter_app';
-
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DropdownSelector } from "../dropdown-selector/dropdown-selector";
-import { SelectorOptions } from '../interfaces/selector-options';
 import { StatsProgressBar } from "../../main-page/stats-progress-bar/stats-progress-bar";
+import { BaseOption } from '../../global/interfaces/base-option';
 
 @Component({
   selector: 'app-enemy-info',
@@ -15,11 +15,11 @@ export class EnemyInfo {
   //Changed selected option and options to new interface
   // Pass selected option to parent
   // Update values on html
-  options: SelectorOptions[] = [{value: 'owo', label: 'OwO'}, {value: 'uwu', label: 'UwU'},  {value: 'ewe', label: 'EwE'}];
+  options: BaseOption[] = [];
 
-  selected_option: SelectorOptions | null = null;
+  selected_option: BaseOption | null = null;
 
-  onOptionSelected(value: SelectorOptions) {
+  onOptionSelected(value: BaseOption) {
     this.selected_option = value;
   }
 }

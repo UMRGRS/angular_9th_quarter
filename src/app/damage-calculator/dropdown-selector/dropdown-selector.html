@@ -3,7 +3,7 @@
     <select id="selector" formControlName="option">
         <option value="null">None</option>
         @for (option of options; track $index) {
-        <option [ngValue]="option">{{option.label}}</option>
+        <option [ngValue]="option">{{option.name}}</option>
         }
     </select>
 </form>
