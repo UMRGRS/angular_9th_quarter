@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Searchbar } from "../searchbar/searchbar";
-import { Tiendas } from "../tiendas/tiendas";
+import { Searchbar } from './searchbar/searchbar';
+import { Tiendas } from './tiendas/tiendas';
 
 
 

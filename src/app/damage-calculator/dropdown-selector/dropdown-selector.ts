@@ -11,9 +11,10 @@ import { BaseOption } from '../../global/interfaces/base-option';
 export class DropdownSelector implements OnInit{
   @Input({required:true})
   label:string = "";
-  // Change to generic interface later
+
   @Input({required:true})
   options:BaseOption[] = [];
+  
   @Input()
   initial_value:BaseOption | null = null;
 

@@ -12,7 +12,6 @@ export class CalculatorInputs {
   // Next steps
   // Wrap every output change in an single object
   // Pass object to parent
-  // Input options/labels in a single object and create dropdowns dynamically
   options: BaseOption[] = [{uid: 'owo', name: 'OwO', image:""}, {uid: 'uwu', name: 'UwU', image:""}, {uid: 'ewe', name: 'EwE', image:""}];
 
   selected_option: BaseOption | null = null;
