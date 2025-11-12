@@ -1,8 +1,8 @@
-import { BaseOption } from "./base-option";
+import { EquipmentData } from "./equipment-data";
 
 export interface ActiveEquipment {
-    weapon?: BaseOption,
-    armor?: BaseOption,
-    accessory_one?: BaseOption,
-    accessory_two?: BaseOption,
+    weapon: EquipmentData|null,
+    armor: EquipmentData|null,
+    accessory_one: EquipmentData|null,
+    accessory_two: EquipmentData|null,
 }

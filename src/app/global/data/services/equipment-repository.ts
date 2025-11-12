@@ -23,7 +23,7 @@ export class EquipmentRepository {
   public async getEquipmentList(type:EquipmentType):Promise<Array<EquipmentData>|null>{
     const q = query(
       collection(this.firestore, 'equipment'), 
-      where("type", "==", type.toString()),
+      where("type", "==", type),
       orderBy("name")
     );
 
@@ -46,6 +46,6 @@ export class EquipmentRepository {
 
     const query_snapshot = await this.ngZone.runOutsideAngular(() => getDocs(q));
 
-    return query_snapshot.empty ? null : EquipmentMapper.fromFirestoreList(query_snapshot.docs);
+    return query_snapshot.empty ? EquipmentMapper.fromFirestoreList([]) : EquipmentMapper.fromFirestoreList(query_snapshot.docs);
   }
 }
