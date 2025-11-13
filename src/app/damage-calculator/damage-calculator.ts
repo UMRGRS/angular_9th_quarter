@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CalculatorInputs } from "./calculator-inputs/calculator-inputs";
 import { EnemyInfo } from "./enemy-info/enemy-info";
 import { CalculatorResult } from "./calculator-result/calculator-result";
@@ -11,15 +11,21 @@ import { ActiveEquipment } from '../global/interfaces/active-equipment';
   templateUrl: './damage-calculator.html',
   styleUrl: './damage-calculator.css'
 })
-export class DamageCalculator {
+export class DamageCalculator implements OnInit{
+  
   @Input({required:true})
   user_data!:UserData;
 
   @Input({required:true})
   equipment_data!:ActiveEquipment;
   
-  onDefaultOptionsChange($event: ActiveEquipment) {
-    console.log("Parent");
-    console.log($event);
+  calculator_data!:ActiveEquipment;
+
+  ngOnInit():void {
+    this.calculator_data = {...this.equipment_data};
+  }
+
+  onDefaultOptionsChange($event: ActiveEquipment):void{
+    console.log("update");
   }
 }

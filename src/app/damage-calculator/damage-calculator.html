@@ -2,8 +2,10 @@
     <div class="calc">Calculadora</div>
     <div class="row">
         <div class="col-12 col-md-12 col-lg">
+            @if (equipment_data) {
             <app-calculator-inputs [default_options]="equipment_data"
                 (defaultOptionsChange)="onDefaultOptionsChange($event)"></app-calculator-inputs>
+            }
         </div>
         <div class="col-12 col-md-12 col-lg-1">
             <p>VS</p>

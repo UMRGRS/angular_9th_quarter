@@ -31,8 +31,10 @@ export class DropdownSelector implements OnInit{
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['initial_value'] && changes['options'] && this.options.length > 0) {
-      const default_option = this.options.find((element) => element.uid == this.initial_value?.uid);
+    if (this.options?.length && this.initial_value) {
+      const default_option = this.options.find(
+        (element) => element.uid === this.initial_value?.uid 
+      );
       this.selector_form.get('option')!.setValue(default_option);
     }
   }
