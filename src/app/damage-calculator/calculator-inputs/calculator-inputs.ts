@@ -41,8 +41,32 @@ export class CalculatorInputs implements OnInit{
 
   selected_option: BaseOption | null = null;
 
-  onOptionSelected(value: BaseOption) {
-    // Make here system to pass value to parent correctly
-    this.selected_option = value;
+  onOptionSelected<T extends BaseOption>(value: T) {
+    const equipment = value as EquipmentData;
+    switch(equipment.type){
+      case EquipmentType.WEAPON:{ 
+        this.default_options.weapon = value;
+        this.defaultOptionsChange.emit(this.default_options);
+        break;
+      }
+      case EquipmentType.ARMOR:{ 
+        this.default_options.armor = value;
+        this.defaultOptionsChange.emit(this.default_options);
+        break;
+      }
+      case EquipmentType.ACC_1:{ 
+        this.default_options.accessory_one = value;
+        this.defaultOptionsChange.emit(this.default_options);
+        break;
+      }
+      case EquipmentType.ACC_2:{ 
+        this.default_options.accessory_two = value;
+        this.defaultOptionsChange.emit(this.default_options);
+        break;
+      }
+      default:
+        console.log("Incorrect data");
+        break;
+    }
   }
 }

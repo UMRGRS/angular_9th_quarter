@@ -1,7 +1,7 @@
 import { BaseOption } from "./base-option";
 
 export interface EquipmentData extends BaseOption{
-    type:string
+    type?:string
     armor?: string
     base_damage?:number
     strength_scaling?:number
