@@ -1,0 +1,125 @@
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Resultext {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: 'P5-hatty', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+.character-container {
+    position: relative;
+
+    width: 280px;
+    height: 420px;
+
+    background-image: url("/assets/morgana.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    mask-image: url("/assets/morgana.png");
+    -webkit-mask-image: url("/assets/morgana.png");
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    overflow: hidden; 
+}
+
+.water {
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    width: 100%;
+    background: #ff0000;
+    clip-path: path("M0,80 Q70,60 140,80 T280,80 L280,420 L0,420 Z");
+    transition: height 1.5s ease-out;
+    height: 0; /* inicial vacío */
+
+    transition: height 1.6s cubic-bezier(.36, .11, .1, .99); 
+    overflow: hidden;
+}
+
+.water::before,
+.water::after,
+.water .wave-layer {
+    content: "";
+    position: absolute;
+    width: 350%;
+    height: 120px;
+    top: -60px;
+    left: -120%;
+    border-radius: 45%; 
+    opacity: 0.5;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.water::before {
+    animation: waveFlow1 4s infinite linear;
+    opacity: 0.45;
+}
+
+.water::after {
+    animation: waveFlow2 6s infinite linear;
+    opacity: 0.6;
+}
+
+.water .wave-layer {
+    animation: waveFlow3 8s infinite linear;
+    opacity: 0.25;
+}
+
+@keyframes waveClip {
+    0% {
+        clip-path: path("M0,88 Q70,40 140,88 T280,88 L280,420 L0,420 Z");
+    }
+    50% {
+        clip-path: path("M0,72 Q70,85 140,72 T280,72 L280,420 L0,420 Z");
+    }
+    100% {
+        clip-path: path("M0,88 Q70,40 140,88 T280,88 L280,420 L0,420 Z");
+    }
+}
+
+
+.water {
+    animation: waveClip 5s ease-in-out infinite;
+}
+
+
+@keyframes waveFlow1 {
+    0%   { transform: translateX(0) translateY(0); }
+    40%  { transform: translateX(25%) translateY(8px); }
+    80%  { transform: translateX(50%) translateY(0); }
+    100% { transform: translateX(75%) translateY(-5px); }
+}
+
+@keyframes waveFlow2 {
+    0%   { transform: translateX(0) translateY(4px); }
+    50%  { transform: translateX(30%) translateY(-6px); }
+    100% { transform: translateX(60%) translateY(4px); }
+}
+
+@keyframes waveFlow3 {
+    0%   { transform: translateX(0) translateY(0); }
+    45%  { transform: translateX(20%) translateY(10px); }
+    100% { transform: translateX(40%) translateY(0); }
+}
+
+.values {
+    color: #ffffff;
+    font-family: 'P5-hatty';
+    font-size: 1.9rem;
+    margin-top: 10px;
+    font-weight: bold;
+}

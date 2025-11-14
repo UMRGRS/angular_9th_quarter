@@ -1,4 +1,65 @@
-img {
-    width: 110px;
-    height: auto;
+.player-items-container {
+  padding-top: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  -webkit-text-stroke: .5px #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-family: 'P5-menu', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: filter 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.item-icon:hover {
+  filter: drop-shadow(0 0 10px #ff0000) brightness(1.4);
+  transform: scale(1.05);
+}
+
+/* 📐 Etiqueta inclinada tipo Persona 5 */
+.item-label {
+  background-color: #000;
+  border: 3px solid #fff;
+  padding: 4px 12px;
+  margin-top: 8px;
+  transform: rotate(-4deg);
+  box-shadow: 3px 3px 0 #a00404;
+  display: inline-block;
+}
+
+/* ✍️ Texto dentro de la etiqueta */
+.item-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: 'P5-hatty', sans-serif;
+  letter-spacing: 1px;
 }

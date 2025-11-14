@@ -12,4 +12,6 @@ import { DamageCalculator } from "../damage-calculator/damage-calculator";
 })
 export class MainPage{
   
+  
 }
+
