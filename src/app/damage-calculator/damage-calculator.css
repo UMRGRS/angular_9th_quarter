@@ -17,3 +17,11 @@
     z-index: -1;
 
 }
+
+.vs {
+    color: #ffffff;
+    font-family: 'Expose';
+    font-size: 3.1rem;
+    margin-top: 10px;
+    font-weight: bold;
+}
