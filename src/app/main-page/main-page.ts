@@ -3,11 +3,9 @@ import { PlayerAvatar } from "./player-avatar/player-avatar";
 import { PlayerItems } from "./player-items/player-items";
 import { PlayerStats } from "./player-stats/player-stats";
 import { DamageCalculator } from "../damage-calculator/damage-calculator";
-import { UserRepository } from '../global/data/services/user-repository';
 import { UserData } from '../global/interfaces/user-data';
-import { EquipmentRepository } from '../global/data/services/equipment-repository';
 import { ActiveEquipment } from '../global/interfaces/active-equipment';
-
+import { SharedData } from '../global/services/shared-data';
 
 @Component({
   selector: 'app-main-page',
@@ -16,17 +14,16 @@ import { ActiveEquipment } from '../global/interfaces/active-equipment';
   styleUrl: './main-page.css'
 })
 export class MainPage implements OnInit{
-user_data: any;
-  constructor(private user_repo:UserRepository, private equipment_repo:EquipmentRepository){}
+  constructor(private shared_data:SharedData){}
 
   user!:UserData;
+
   equipment!:ActiveEquipment;
 
-  async ngOnInit(){
-    //Only for testing purposes
-    this.user = (await this.user_repo.getUser("Mizuki"))!;
-
-    this.equipment = (await this.equipment_repo.getUserEquipment([this.user?.weapon, this.user?.armor, this.user?.accessory_one, this.user?.accessory_two]))!;
+  ngOnInit(): void {
+    const data = this.shared_data.getData();
+    this.user = data?.user!;
+    this.equipment = data?.equipment!;
   }
 }
 

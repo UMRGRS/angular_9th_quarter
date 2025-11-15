@@ -33,3 +33,14 @@ body {
   // Reset the user agent margin.
   margin: 0;
 }
+
+.no-card-dialog {
+  .mat-mdc-dialog-container {
+    .mdc-dialog__surface {
+      background: transparent !important;   // Remove white background
+      box-shadow: none !important;          // Remove card shadow
+      border-radius: 0 !important;          // Remove rounded corners
+      padding: 0 !important;                // Optional: remove padding
+    }
+  }
+}
