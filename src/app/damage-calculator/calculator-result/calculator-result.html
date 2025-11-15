@@ -1,14 +1,13 @@
-<p class="Resultext">Resultado</p>
+<p class="result-text">Resultado</p>
 <div class="result-wrapper">
     <div class="character-container">
-        <div class="water" [style.height.%]="progress"></div>
         <div class="water" [style.height.%]="progress">
-    <div class="wave-layer"></div>
- </div>
-<!-- 
-            Aqui va el gif de derrota
-
-        <img src="assets/defeat.gif" class="gif-defeat" /> -->
+            <div class="wave-layer">
+            </div>
+        </div>
     </div>
-    <p class="values">{{current_value}} / {{max_value}}</p>
+    @if (current_value <= 0) { <p class="values">KO!</p>
+        }@else{
+        <p class="values">{{current_value}} / {{this.selected_enemy.max_hp ?? 0}}</p>
+        }
 </div>

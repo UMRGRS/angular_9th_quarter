@@ -2,7 +2,6 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { DropdownSelector } from "../dropdown-selector/dropdown-selector";
 import { BaseOption } from '../../global/interfaces/base-option';
 import { ActiveEquipment } from '../../global/interfaces/active-equipment';
-import { EquipmentRepository } from '../../global/data/services/equipment-repository';
 import { EquipmentData } from '../../global/interfaces/equipment-data';
 import { EquipmentType } from '../../global/enums/equipment-type';
 
@@ -13,7 +12,6 @@ import { EquipmentType } from '../../global/enums/equipment-type';
   styleUrl: './calculator-inputs.css'
 })
 export class CalculatorInputs implements OnInit{
-  constructor(private equipment_repo:EquipmentRepository){}
   
   @Input({required:true})
   default_options!:ActiveEquipment;
@@ -22,25 +20,20 @@ export class CalculatorInputs implements OnInit{
 
   changed_options!:ActiveEquipment;
 
+  @Input({required:true})
   weapon_options!:Array<EquipmentData>;
+
+  @Input({required:true})
   armor_options!:Array<EquipmentData>;
+
+  @Input({required:true})
   accessory_one_options!:Array<EquipmentData>;
+
+  @Input({required:true})
   accessory_two_options!:Array<EquipmentData>;
 
   async ngOnInit() {
     this.changed_options = {...this.default_options};
-
-    const [queried_weapon_options, queried_armor_options, queried_acc_1_options, queried_acc_2_options] = 
-      await Promise.all([
-          this.equipment_repo.getEquipmentList(EquipmentType.WEAPON), 
-          this.equipment_repo.getEquipmentList(EquipmentType.ARMOR), 
-          this.equipment_repo.getEquipmentList(EquipmentType.ACC_1), 
-          this.equipment_repo.getEquipmentList(EquipmentType.ACC_2)]);
-
-    this.weapon_options = queried_weapon_options ?? [];
-    this.armor_options = queried_armor_options ?? [];
-    this.accessory_one_options = queried_acc_1_options ?? [];
-    this.accessory_two_options = queried_acc_2_options ?? [];
   }
 
   onOptionSelected<T extends BaseOption>(value: T) {

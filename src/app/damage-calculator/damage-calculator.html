@@ -1,20 +1,30 @@
 <div class="container-fluid">
-    <div class="calc"><img class="calc-icon" src="/assets/calculadora_2.png" /> Calculadora</div>
+    <div class="calc"><img class="calc-icon" src="/assets/calculadora_2.png" />Calculadora</div>
+    @if (load_complete) {
     <div class="row">
         <div class="col-12 col-md-12 col-lg">
-            @if (equipment_data) {
-            <app-calculator-inputs [default_options]="equipment_data"
-                (defaultOptionsChange)="onDefaultOptionsChange($event)"></app-calculator-inputs>
-            }
+            <app-calculator-inputs [weapon_options]="weapon_options" [armor_options]="armor_options"
+                [accessory_one_options]="accessory_one_options" [accessory_two_options]="accessory_two_options"
+                [default_options]="equipment"
+                (defaultOptionsChange)="onDefaultEquipmentOptionsChange($event)"></app-calculator-inputs>
         </div>
-        <div class="col-12 col-md-12 col-lg-1">
+        <div class="col-12 col-md-12 col-lg">
             <p class="vs">VS</p>
         </div>
         <div class="col-12 col-md-6 col-lg">
-            <app-enemy-info></app-enemy-info>
+            <app-enemy-info [options]="enemies_options" [selected_enemy]="enemy"
+                (selectedEnemyChange)="onSelectedEnemyChange($event)"></app-enemy-info>
+        </div>
+        <div class="col-12 col-md-6 col-lg d-flex flex-column">
+            <button class="calculate-button mb-4" (click)="applyDamageFormula()">Go!</button>
+            <button class="calculate-button" (click)="clearCalculator()">Clear</button>
         </div>
         <div class="col-12 col-md-6 col-lg">
-            <app-calculator-result [max_value]="100" [current_value]="69"></app-calculator-result>
+            <app-calculator-result [selected_enemy]="enemy" [damage_done]="total_damage"></app-calculator-result>
         </div>
     </div>
+    }
+    @else {
+    <p>Loading</p>
+    }
 </div>

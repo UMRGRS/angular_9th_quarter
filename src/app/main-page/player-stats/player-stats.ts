@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { StatsProgressBar } from "../stats-progress-bar/stats-progress-bar";
+import { ShowStats } from "../show-stats/show-stats";
 
 @Component({
   selector: 'app-player-stats',
-  imports: [StatsProgressBar],
+  imports: [ShowStats],
   templateUrl: './player-stats.html',
   styleUrl: './player-stats.css'
 })

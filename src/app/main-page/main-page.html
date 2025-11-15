@@ -12,7 +12,9 @@
     </div>
     <div class="row">
         <div class="col-12 pt-4">
-            <app-damage-calculator [user_data]="user" [equipment_data]="equipment"></app-damage-calculator>
+            @if (user!=null && equipment!=null) {
+            <app-damage-calculator [player_data]="user" [equipment_data]="equipment"></app-damage-calculator>
+            }
         </div>
     </div>
 </div>

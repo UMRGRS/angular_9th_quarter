@@ -1,4 +1,4 @@
-.calc{
+.calc {
     font-family: P5-hatty;
     font-size: xx-large;
     color: white;
@@ -6,13 +6,13 @@
     letter-spacing: 5px;
 }
 
-.calc-icon{
+.calc-icon {
     position: relative;
-    transform: rotate(-20deg);          
+    transform: rotate(-20deg);
     left: 2%;
-    bottom: 20px;        
-    width: 4%;       
-    height: auto; 
+    bottom: 20px;
+    width: 4%;
+    height: auto;
     object-fit: contain;
     z-index: -1;
 
@@ -24,4 +24,21 @@
     font-size: 3.1rem;
     margin-top: 10px;
     font-weight: bold;
+}
+
+.calculate-button {
+    padding: 20px 20px;
+    color: #000;
+    font-family: 'Expose';
+    border: none;
+    border-radius: 6px;
+    font-size: 3.1rem;
+    cursor: pointer;
+    text-shadow: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculate-button:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 0 #aa2828;
 }
