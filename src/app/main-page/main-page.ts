@@ -8,6 +8,7 @@ import { UserData } from '../global/interfaces/user-data';
 import { EquipmentRepository } from '../global/data/services/equipment-repository';
 import { ActiveEquipment } from '../global/interfaces/active-equipment';
 
+
 @Component({
   selector: 'app-main-page',
   imports: [PlayerAvatar, PlayerItems, PlayerStats, DamageCalculator],
