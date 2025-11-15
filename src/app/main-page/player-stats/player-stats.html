@@ -3,10 +3,10 @@
         <div class="stats_font">Estadísticas</div>
     </div>
     <div style="margin-top: 4%;">
-        <app-stats-progress-bar name="Nivel" [value]="100"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Fuerza" [value]="2200"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Destreza" [value]="100"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Inteligencia" [value]="100"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Fe" [value]="100"></app-stats-progress-bar>
+        <app-stats-progress-bar name="Nivel" [value]="user_data.level"></app-stats-progress-bar>
+        <app-stats-progress-bar name="Fuerza" [value]="user_data.strength"></app-stats-progress-bar>
+        <app-stats-progress-bar name="Destreza" [value]="user_data.dexterity"></app-stats-progress-bar>
+        <app-stats-progress-bar name="Inteligencia" [value]="user_data.intelligence"></app-stats-progress-bar>
+        <app-stats-progress-bar name="Fe" [value]="user_data.fait"></app-stats-progress-bar>
     </div>
 </div>

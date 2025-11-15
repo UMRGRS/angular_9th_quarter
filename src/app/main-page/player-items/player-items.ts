@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ActiveEquipment } from '../../global/interfaces/active-equipment';
 
 @Component({
   selector: 'app-player-items',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './player-items.css'
 })
 export class PlayerItems {
-
+  @Input({required:true})
+  equipment_data!:ActiveEquipment;
 }

@@ -1,20 +1,20 @@
 <div class="container-fluid text-center">
+    @if (user && equipment) {
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-3 pt-4 align-self-center">
-            <app-player-avatar></app-player-avatar>
+            <app-player-avatar [user_data]="user"></app-player-avatar>
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-5">
-            <app-player-items></app-player-items>
+            <app-player-items [equipment_data]="equipment"></app-player-items>
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 pt-4 align-self-center">
-            <app-player-stats></app-player-stats>
+            <app-player-stats [user_data]="user"></app-player-stats>
         </div>
     </div>
     <div class="row">
         <div class="col-12 pt-4">
-            @if (user!=null && equipment!=null) {
             <app-damage-calculator [player_data]="user" [equipment_data]="equipment"></app-damage-calculator>
-            }
         </div>
     </div>
+    }
 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { UserData } from '../../global/interfaces/user-data';
 
 @Component({
   selector: 'app-player-avatar',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './player-avatar.css'
 })
 export class PlayerAvatar {
-
+  @Input({required:true})
+  user_data!:UserData;
 }
