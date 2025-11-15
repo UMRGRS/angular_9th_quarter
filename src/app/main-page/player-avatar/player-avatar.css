@@ -6,7 +6,7 @@
   margin-top: 7%;
 }
 
-/* 💥 Marco irregular estilo Persona 5 */
+
 .avatar-frame {
   position: relative;
   display: inline-block;
@@ -19,26 +19,26 @@
   width: fit-content;
 }
 
-/* 🌀 Fondo espiral circular que cubre toda la card */
+
 .avatar-frame::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 200%; /* 🔥 más grande para cubrir toda la card */
+  width: 200%;
   height: 200%;
   background: repeating-conic-gradient(
     #ff0000 0deg 20deg,
     #000 20deg 40deg
   );
-  border-radius: 50%; /* círculo perfecto */
+  border-radius: 50%; 
   transform: translate(-50%, -50%);
-  animation: spin 45s linear infinite; /* 🐢 más lento (antes 20s) */
+  animation: spin 45s linear infinite; 
   z-index: 0;
   opacity: 0.5;
 }
 
-/* 🎞️ Animación del fondo */
+
 @keyframes spin {
   from {
     transform: translate(-50%, -50%) rotate(0deg);

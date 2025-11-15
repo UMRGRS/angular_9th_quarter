@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .Resultext {
@@ -38,7 +39,7 @@
 
 .water {
     position: absolute;
-    bottom: -15%;
+    bottom: 0;
     left: 0;
     width: 100%;
     background: #ff0000;
@@ -123,3 +124,17 @@
     margin-top: 10px;
     font-weight: bold;
 }
+
+/*
+Aqui esta el css del gif de derrota
+
+.gif-defeat {
+ position: absolute;
+    top: 10%;              
+    left: 50%;              
+    transform: translateX(-50%);
+    width: auto;            
+    height: auto;           
+        
+}
+*/
