@@ -1,14 +1,14 @@
-<p>Resultado</p>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col">
-            <div class="progress" role="progressbar" aria-label="stat-bar" aria-valuenow="50" aria-valuemin="0"
-                aria-valuemax="100">
-                <div class="progress-bar bg-success" [style.width.%]="progress"></div>
-            </div>
-        </div>
-        <div class="col">
-            <p> {{current_value}} / {{max_value}} </p>
-        </div>
+<p class="Resultext">Resultado</p>
+
+<div class="result-wrapper">
+    <div class="character-container">
+        <div class="water" [style.height.%]="progress"></div>
+        <div class="water" [style.height.%]="progress">
+    <div class="wave-layer"></div>
+    
+</div>
+
     </div>
+
+    <p class="values">{{current_value}} / {{max_value}}</p>
 </div>

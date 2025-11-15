@@ -28,3 +28,4 @@ user_data: any;
     this.equipment = (await this.equipment_repo.getUserEquipment([this.user?.weapon, this.user?.armor, this.user?.accessory_one, this.user?.accessory_two]))!;
   }
 }
+

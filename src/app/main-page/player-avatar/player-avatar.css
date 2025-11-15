@@ -1,3 +1,77 @@
-.img-fluid {
-    height: 400px;
+.avatar-card {
+  position: relative;
+  display: inline-block;
+  transform: translateY(-50px);
+  text-align: center;
+  margin-top: 7%;
+}
+
+/* 💥 Marco irregular estilo Persona 5 */
+.avatar-frame {
+  position: relative;
+  display: inline-block;
+  padding: 8px;
+  background: #000;
+  border: 3px solid #fff;
+  transform: rotate(-2deg);
+  box-shadow: 5px 5px 0 #a50505;
+  overflow: hidden;
+  width: fit-content;
+}
+
+/* 🌀 Fondo espiral circular que cubre toda la card */
+.avatar-frame::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%; /* 🔥 más grande para cubrir toda la card */
+  height: 200%;
+  background: repeating-conic-gradient(
+    #ff0000 0deg 20deg,
+    #000 20deg 40deg
+  );
+  border-radius: 50%; /* círculo perfecto */
+  transform: translate(-50%, -50%);
+  animation: spin 45s linear infinite; /* 🐢 más lento (antes 20s) */
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* 🎞️ Animación del fondo */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.avatar-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid #fff;
+  background: transparent;
+  transform: rotate(3deg) translate(5px, 5px);
+  z-index: 1;
+}
+
+.player-img {
+  display: block;
+  height: 400px;
+  width: auto;
+  object-fit: cover;
+  position: relative;
+  z-index: 2; 
+}
+
+.player-name {
+  font-family: 'Expose', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 1100;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }

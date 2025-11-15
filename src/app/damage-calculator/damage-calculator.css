@@ -5,3 +5,15 @@
     font-weight: 900000;
     letter-spacing: 5px;
 }
+
+.calc-icon{
+    position: relative;
+    transform: rotate(-20deg);          
+    left: 2%;
+    bottom: 20px;        
+    width: 4%;       
+    height: auto; 
+    object-fit: contain;
+    z-index: -1;
+
+}
