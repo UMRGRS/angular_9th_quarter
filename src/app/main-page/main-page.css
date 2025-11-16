@@ -1,0 +1,35 @@
+.calculate-button {
+    transform: skew(25deg);
+    padding: 12px;
+    color: #FFF;
+    border: #FFF solid 2px;
+    background-color: #161616;
+    font-family: 'P5-menu';
+    border-radius: 6px;
+    font-size: 2rem;
+    cursor: pointer;
+    text-shadow: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button_container {
+    background-color: #000000;
+    transform: skew(25deg);
+    border: solid #ffffff;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button_font {
+    transform: skew(-25deg);
+    padding-bottom: 0px;
+    font-family: 'P5-menu';
+    font-size: xx-large;
+    flex: 1;
+    color: #ffffff;
+}
+
+.button_container:hover {
+    transform: scale(1.03), skew(25deg);
+    box-shadow: 8px 8px 0 #aa2828;
+}

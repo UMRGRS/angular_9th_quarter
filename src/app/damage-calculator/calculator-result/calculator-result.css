@@ -15,13 +15,10 @@
     letter-spacing: 1px;
 }
 
-
 .character-container {
     position: relative;
-
     width: 280px;
-    height: 420px;
-
+    height: 250px;
     background-image: url("/assets/morgana.png");
     background-size: contain;
     background-repeat: no-repeat;

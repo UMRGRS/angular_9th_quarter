@@ -1,13 +1,22 @@
 <div class="container-fluid text-center">
+    <div class="row mt-4 mb-4">
+        <div class="col d-flex justify-content-start">
+            <button class="button_container" routerLink="/">
+                <div class="button_font">
+                    Back
+                </div>
+            </button>
+        </div>
+    </div>
     @if (user && equipment) {
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-3 pt-4 align-self-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
             <app-player-avatar [user_data]="user"></app-player-avatar>
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-5">
             <app-player-items [equipment_data]="equipment"></app-player-items>
         </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 pt-4 align-self-center">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4">
             <app-player-stats [user_data]="user"></app-player-stats>
         </div>
     </div>
@@ -18,3 +27,4 @@
     </div>
     }
 </div>
+<router-outlet />

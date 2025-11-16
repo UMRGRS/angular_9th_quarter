@@ -1,12 +1,15 @@
-<div class="pt-4">
-    <div class="stats">
-        <div class="stats_font">Estadísticas</div>
+<div class="container text-center">
+    <div class="row stats">
+        <div class="stats_font">Stats</div>
     </div>
-    <div style="margin-top: 4%;">
-        <app-stats-progress-bar name="Nivel" [value]="user_data.level"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Fuerza" [value]="user_data.strength"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Destreza" [value]="user_data.dexterity"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Inteligencia" [value]="user_data.intelligence"></app-stats-progress-bar>
-        <app-stats-progress-bar name="Fe" [value]="user_data.fait"></app-stats-progress-bar>
+    <div class="row">
+        <div class="col-2 col-sm-0 col-md-1 col-lg-1 col-xl-2"></div>
+        <div class="col-10 col-sm-12 col-md-11 col-lg-11 col-xl-10 mt-4">
+            <app-stats-progress-bar name="Level" [value]="user_data.level"></app-stats-progress-bar>
+            <app-stats-progress-bar name="Strength" [value]="user_data.strength"></app-stats-progress-bar>
+            <app-stats-progress-bar name="Dexterity" [value]="user_data.dexterity"></app-stats-progress-bar>
+            <app-stats-progress-bar name="Intelligence" [value]="user_data.intelligence"></app-stats-progress-bar>
+            <app-stats-progress-bar name="Faith" [value]="user_data.fait"></app-stats-progress-bar>
+        </div>
     </div>
 </div>

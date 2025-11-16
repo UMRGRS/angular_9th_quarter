@@ -6,10 +6,11 @@ import { DamageCalculator } from "../damage-calculator/damage-calculator";
 import { UserData } from '../global/interfaces/user-data';
 import { ActiveEquipment } from '../global/interfaces/active-equipment';
 import { SharedData } from '../global/services/shared-data';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
-  imports: [PlayerAvatar, PlayerItems, PlayerStats, DamageCalculator],
+  imports: [PlayerAvatar, PlayerItems, PlayerStats, DamageCalculator, RouterOutlet, RouterLink],
   templateUrl: './main-page.html',
   styleUrl: './main-page.css'
 })

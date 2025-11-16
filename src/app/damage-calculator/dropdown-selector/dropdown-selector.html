@@ -1,11 +1,14 @@
-<form [formGroup]="selector_form" class="mb-2 form">
-    <label for="selector" class="mx-2 label-enemigo">{{label}}</label>
+<form [formGroup]="selector_form" class="mb-2 mt-4">
+    <label for="selector" class="me-4 label">{{label}}</label>
+
     @if (options) {
-    <select class="dropdown" id="selector" formControlName="option">
+    <select class="dropdown-box" id="selector" formControlName="option"
+        [attr.data-label]="selector_form.get('option')?.value?.name">
         <option hidden value="null"></option>
         @for (option of options; track $index) {
-        <option [ngValue]="option">{{option.name}}</option>
+        <option [ngValue]="option">{{ option.name }}</option>
         }
     </select>
+
     }
 </form>

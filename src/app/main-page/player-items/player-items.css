@@ -1,20 +1,20 @@
-.player-items-container {
-  padding-top: 1rem;
+.title_container {
+  display: inline-block;
+  background-color: #000000;
+  transform: skew(25deg);
+  border: solid #ffffff;
+  padding: 3%;
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #000;
-  -webkit-text-stroke: .5px #fff;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-  font-family: 'P5-menu', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
+.title_font {
+  transform: skew(-25deg);
+  padding-bottom: 0px;
+  font-family: 'P5-menu';
+  font-size: xx-large;
+  flex: 1;
+  color: #ffffff;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, -3px 0px 0 #000, 3px 0px 0 #000, 0px -3px 0 #000, 0px 3px 0 #000;
 }
-
-
 
 .items-grid {
   display: grid;

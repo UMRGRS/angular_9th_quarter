@@ -1,12 +1,12 @@
-<div>
-    <app-dropdown-selector label="Arma" [options]="weapon_options" (selection_change)="onOptionSelected($event)"
+<div class="mt-4">
+    <app-dropdown-selector label="Weapon" [options]="weapon_options" (selection_change)="onOptionSelected($event)"
         [initial_value]="default_options.weapon"></app-dropdown-selector>
-    <app-dropdown-selector label="Armadura" [options]="armor_options" (selection_change)="onOptionSelected($event)"
+    <app-dropdown-selector label="Armor" [options]="armor_options" (selection_change)="onOptionSelected($event)"
         [initial_value]="default_options.armor"></app-dropdown-selector>
-    <app-dropdown-selector label="Accesorio 1" [options]="accessory_one_options"
+    <app-dropdown-selector label="Accessory 1" [options]="accessory_one_options"
         (selection_change)="onOptionSelected($event)"
         [initial_value]="default_options.accessory_one"></app-dropdown-selector>
-    <app-dropdown-selector label="Accesorio 2" [options]="accessory_two_options"
+    <app-dropdown-selector label="Accessory 2" [options]="accessory_two_options"
         (selection_change)="onOptionSelected($event)"
         [initial_value]="default_options.accessory_two"></app-dropdown-selector>
 </div>
