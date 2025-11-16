@@ -1,0 +1,65 @@
+.title_container {
+  display: inline-block;
+  background-color: #000000;
+  transform: skew(25deg);
+  border: solid #ffffff;
+  padding: 3%;
+}
+
+.title_font {
+  transform: skew(-25deg);
+  padding-bottom: 0px;
+  font-family: 'P5-menu';
+  font-size: xx-large;
+  flex: 1;
+  color: #ffffff;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, -3px 0px 0 #000, 3px 0px 0 #000, 0px -3px 0 #000, 0px 3px 0 #000;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  transition: filter 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.item-icon:hover {
+  filter: drop-shadow(0 0 10px #ff0000) brightness(1.4);
+  transform: scale(1.05);
+}
+
+
+.item-label {
+  background-color: #000;
+  border: 3px solid #fff;
+  padding: 4px 12px;
+  margin-top: 8px;
+  transform: rotate(-4deg);
+  box-shadow: 3px 3px 0 #a00404;
+  display: inline-block;
+}
+
+
+.item-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: 'P5-hatty', sans-serif;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,17 @@
+<div class="search-wrapper">
+    <div class="search-box left-tail">
+        <span class="search-label">Search</span>
+        <form id="searchUserForm" [formGroup]="search_user">
+            <input type="text" id="username" class="search-input" placeholder="Username . . ."
+                formControlName="username" required>
+
+            @if(show_loading_icon){
+            <div class="spinner-border text-danger search-loading-circle" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            }@else {
+            <div class="search-triangle" (click)="searchUser()"></div>
+            }
+        </form>
+    </div>
+</div>

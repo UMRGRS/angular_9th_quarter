@@ -1,0 +1,62 @@
+/* Configuración del host del componente */
+:host {
+  display: inline-block;
+}
+/*  Estilo de la imagen del logotipo */
+.tienda_image {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.tienda_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-fit: contain;
+}
+
+
+/* Estilo del texto y su contenedor */
+.tienda_text_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tienda_text {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: none;
+}
+
+/* Enlace */
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+/* Tarjeta principal de la tienda */
+.tienda_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 12px 8px;
+  background-color: #000;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: none !important;
+  rotate: 0deg;
+  
+}
+
+.tienda_card:hover {
+  transform: scale(1.03); 
+  box-shadow: 8px 8px 0 #aa2828;
+}

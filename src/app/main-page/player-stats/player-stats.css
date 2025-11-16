@@ -1,0 +1,18 @@
+.stats{
+    display: inline-block;
+    background-color: #000000;
+    transform: skew(25deg);
+    border:  solid #ffffff;
+    padding: 3%;
+    
+}
+
+.stats_font{
+    transform: skew(-25deg);
+    padding-bottom: 0px;
+    font-family: 'P5-menu';
+    font-size:xx-large;
+    flex: 1; 
+    color: #ffffff;
+    text-shadow:-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, -3px 0px 0 #000, 3px 0px 0 #000, 0px -3px 0 #000, 0px 3px 0 #000;
+}

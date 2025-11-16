@@ -1,0 +1,42 @@
+.stat-box {
+  /* You can change --stat-width (or set width directly) to resize the box.
+     The contents use percentages / aspect-ratio so they scale with this container. *          /* default — override inline or in a wrapper */
+  display: inline-flex;
+  border-radius: 5px;
+  transform: rotate(2deg);
+}
+
+.stat-number {
+  font-family: "P5-hatty";
+  color: #000;
+  background-color: red;
+  padding-right: 20%;
+  /* make this element size relative to the parent so clip-path scales */
+  width: 100%;
+  /* percent of .stat-box width */
+  aspect-ratio: 2.6 / 1;
+  /* keeps height proportional to width */
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  clip-path: polygon(12% 12%, 82% 14%, 75% 37%, 85% 54%, 68% 61%, 59% 82%, 2% 74%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* responsive font size */
+  font-size: clamp(1rem, 2.2vw, 1.6rem);
+  transition: color .12s ease, transform .12s ease;
+}
+
+.stat-number:hover {
+  color: white;
+  transform: scale(1.02);
+}
+
+.stat-name {
+  font-family: "P5-hatty";
+  color: #fff;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000, -6px 0px 0 #000, 6px 0px 0 #000, 0px -6px 0 #000, 0px 6px 0 #000;
+  /* keep the name flexible so it follows the box size */
+  margin-top: 4%;
+  font-size: 40px;
+}

@@ -1,0 +1,31 @@
+.label {
+    margin: 2%;
+    font-family: 'P5-menu';
+    font-size: 350%;
+    flex: 1;
+    color: #ffffff;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, -3px 0px 0 #000, 3px 0px 0 #000, 0px -3px 0 #000, 0px 3px 0 #000;
+}
+
+/* Outer skewed container */
+.dropdown-box {
+    background-color: #000000;
+    border: solid 2px #ffffff;
+    padding: 12px 20px;
+    transform: skew(10deg);
+    cursor: pointer;
+    outline: none;
+    font-family: 'P5-hatty';
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+    box-shadow: 8px 8px 0 #aa2828;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dropdown-box:focus {
+    border-color: #aa2828;
+}
