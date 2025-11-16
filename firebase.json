@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/9th_quarter_app",
+    "public": "dist/9th_quarter_app/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
