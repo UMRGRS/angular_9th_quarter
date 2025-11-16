@@ -1,32 +1,33 @@
-<div class="player-items-container text-center">
-  <h3 class="title">Objetos</h3>
+<div class="container mb-4">
+  <div class="title_container">
+    <div class="title_font">Items</div>
+  </div>
 
-
-  <div class="items-grid">
+  <div class="items-grid mt-4">
     <div class="item">
       <img src="assets/icons/sword.png" alt="Espada" class="item-icon">
       <div class="item-label">
-        <p class="item-name">Espada</p>
+        <p class="item-name"> {{equipment_data.weapon?.name ?? "Sin arma"}} </p>
       </div>
     </div>
 
     <div class="item">
       <img src="assets/icons/armor.png" alt="Armadura" class="item-icon">
       <div class="item-label">
-        <p class="item-name">Armadura</p>
+        <p class="item-name"> {{equipment_data.armor?.name ?? "Sin armadura"}} </p>
       </div>
     </div>
 
     <div class="item">
       <img src="assets/icons/ring.png" alt="Anillo" class="item-icon">
       <div class="item-label">
-        <p class="item-name">Anillo</p>
+        <p class="item-name"> {{equipment_data.accessory_one?.name ?? "Sin accesorio"}} </p>
       </div>
     </div>
 
     <div class="item">
       <img src="assets/icons/ring.png" alt="Anillo 2" class="item-icon">
       <div class="item-label">
-        <p class="item-name">Anillo 2</p>
+        <p class="item-name"> {{equipment_data.accessory_two?.name ?? "Sin accesorio"}} </p>
       </div>
     </div>

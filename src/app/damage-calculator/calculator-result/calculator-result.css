@@ -5,23 +5,20 @@
     position: relative;
 }
 
-.Resultext {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.9rem;
-  text-transform: uppercase;
-  margin: 0;
-  font-family: 'P5-hatty', sans-serif;
-  letter-spacing: 1px;
+.result-text {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: 'P5-hatty', sans-serif;
+    letter-spacing: 1px;
 }
-
 
 .character-container {
     position: relative;
-
     width: 280px;
-    height: 420px;
-
+    height: 250px;
     background-image: url("/assets/morgana.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -34,7 +31,7 @@
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
     -webkit-mask-position: center;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .water {
@@ -43,11 +40,12 @@
     left: 0;
     width: 100%;
     background: #ff0000;
-    clip-path: path("M0,80 Q70,60 140,80 T280,80 L280,420 L0,420 Z");
+    clip-path: path("M0,0s Q70,60 140,80 T280,80 L280,420 L0,420 Z");
     transition: height 1.5s ease-out;
-    height: 0; /* inicial vacío */
+    height: 0;
+    /* inicial vacío */
 
-    transition: height 1.6s cubic-bezier(.36, .11, .1, .99); 
+    transition: height 1.6s cubic-bezier(.36, .11, .1, .99);
     overflow: hidden;
 }
 
@@ -60,7 +58,7 @@
     height: 120px;
     top: -60px;
     left: -120%;
-    border-radius: 45%; 
+    border-radius: 45%;
     opacity: 0.5;
     background: rgba(255, 255, 255, 0.35);
 }
@@ -84,9 +82,11 @@
     0% {
         clip-path: path("M0,88 Q70,40 140,88 T280,88 L280,420 L0,420 Z");
     }
+
     50% {
         clip-path: path("M0,72 Q70,85 140,72 T280,72 L280,420 L0,420 Z");
     }
+
     100% {
         clip-path: path("M0,88 Q70,40 140,88 T280,88 L280,420 L0,420 Z");
     }
@@ -99,22 +99,49 @@
 
 
 @keyframes waveFlow1 {
-    0%   { transform: translateX(0) translateY(0); }
-    40%  { transform: translateX(25%) translateY(8px); }
-    80%  { transform: translateX(50%) translateY(0); }
-    100% { transform: translateX(75%) translateY(-5px); }
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    40% {
+        transform: translateX(25%) translateY(8px);
+    }
+
+    80% {
+        transform: translateX(50%) translateY(0);
+    }
+
+    100% {
+        transform: translateX(75%) translateY(-5px);
+    }
 }
 
 @keyframes waveFlow2 {
-    0%   { transform: translateX(0) translateY(4px); }
-    50%  { transform: translateX(30%) translateY(-6px); }
-    100% { transform: translateX(60%) translateY(4px); }
+    0% {
+        transform: translateX(0) translateY(4px);
+    }
+
+    50% {
+        transform: translateX(30%) translateY(-6px);
+    }
+
+    100% {
+        transform: translateX(60%) translateY(4px);
+    }
 }
 
 @keyframes waveFlow3 {
-    0%   { transform: translateX(0) translateY(0); }
-    45%  { transform: translateX(20%) translateY(10px); }
-    100% { transform: translateX(40%) translateY(0); }
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    45% {
+        transform: translateX(20%) translateY(10px);
+    }
+
+    100% {
+        transform: translateX(40%) translateY(0);
+    }
 }
 
 .values {
@@ -124,17 +151,3 @@
     margin-top: 10px;
     font-weight: bold;
 }
-
-/*
-Aqui esta el css del gif de derrota
-
-.gif-defeat {
- position: absolute;
-    top: 10%;              
-    left: 50%;              
-    transform: translateX(-50%);
-    width: auto;            
-    height: auto;           
-        
-}
-*/

@@ -1,17 +1,52 @@
-<div class="container-fluid">
-    <div class="calc"><img class="calc-icon" src="/assets/calculadora_2.png" /> Calculadora</div>
-    <div class="row">
-        <div class="col-12 col-md-12 col-lg">
-            <app-calculator-inputs></app-calculator-inputs>
-        </div>
-        <div class="col-12 col-md-12 col-lg-1">
-            <p class="vs">VS</p>
-        </div>
-        <div class="col-12 col-md-6 col-lg">
-            <app-enemy-info></app-enemy-info>
-        </div>
-        <div class="col-12 col-md-6 col-lg">
-            <app-calculator-result [max_value]="100" [current_value]="69"></app-calculator-result>
+<div class="container-fluid mb-4">
+    <div>
+        <img class="calc-icon" src="/assets/calculadora_2.png" />
+        <div class="calc-container">
+            <div class="calc-text">
+                Test your equipment!
+            </div>
         </div>
     </div>
+    @if (load_complete) {
+    <div class="row align-items-center">
+        <div class="col-12 col-sm-12 col-md-5 col-xl-4">
+            <app-calculator-inputs [weapon_options]="weapon_options" [armor_options]="armor_options"
+                [accessory_one_options]="accessory_one_options" [accessory_two_options]="accessory_two_options"
+                [default_options]="equipment"
+                (defaultOptionsChange)="onDefaultEquipmentOptionsChange($event)"></app-calculator-inputs>
+        </div>
+        <div class="col-12 col-sm-12 col-md-2 col-xl-1">
+            <p class="vs mt-4">VS</p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-5 col-xl-4">
+            <app-enemy-info [options]="enemies_options" [selected_enemy]="enemy"
+                (selectedEnemyChange)="onSelectedEnemyChange($event)"></app-enemy-info>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-xl-1">
+            <div class="calculate-button mb-4" (click)="applyDamageFormula()">
+                <div class="calculate-text">
+                    Go!
+                </div>
+            </div>
+            <div class="calculate-button ms-4" (click)="clearCalculator()">
+                <div class="calculate-text">
+                    Clear
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-xl-2">
+            <app-calculator-result [selected_enemy]="enemy" [damage_done]="total_damage"></app-calculator-result>
+        </div>
+    </div>
+    }
+    @else {
+    <div class="calc-container">
+        <div class="loading">
+            Loading
+            <span class="dot dot1">.</span>
+            <span class="dot dot2">.</span>
+            <span class="dot dot3">.</span>
+        </div>
+    </div>
+    }
 </div>

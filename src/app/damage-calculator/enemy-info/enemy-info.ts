@@ -1,25 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DropdownSelector } from "../dropdown-selector/dropdown-selector";
-import { StatsProgressBar } from "../../main-page/stats-progress-bar/stats-progress-bar";
+import { ShowStats } from "../../main-page/show-stats/show-stats";
 import { BaseOption } from '../../global/interfaces/base-option';
+import { EnemiesData } from '../../global/interfaces/enemies-data';
 
 @Component({
   selector: 'app-enemy-info',
-  imports: [DropdownSelector, StatsProgressBar],
+  imports: [DropdownSelector, ShowStats],
   templateUrl: './enemy-info.html',
   styleUrl: './enemy-info.css'
 })
-export class EnemyInfo {
-  //Next steps
-  //Add interface for enemies data
-  //Changed selected option and options to new interface
-  // Pass selected option to parent
-  // Update values on html
-  options: BaseOption[] = [];
+export class EnemyInfo{
+  @Input({required:true})
+  options!:EnemiesData[];
 
-  selected_option: BaseOption | null = null;
+  @Input({required:true})
+  selected_enemy!:EnemiesData;
+  
+  @Output() selectedEnemyChange = new EventEmitter<EnemiesData>();
 
-  onOptionSelected(value: BaseOption) {
-    this.selected_option = value;
+  onOptionSelected <T extends BaseOption>(value: T) {
+    this.selected_enemy = value;
+    this.selectedEnemyChange.emit(this.selected_enemy);
   }
 }

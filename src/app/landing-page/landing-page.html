@@ -1,4 +1,4 @@
-<body class="banner">
+<div class="banner">
   <div class="landing-layout">
     <!-- Imagen del personaje -->
     <img src="assets/personaje.png" alt="Personaje" class="personaje-img">
@@ -6,26 +6,19 @@
     <app-searchbar></app-searchbar>
   </div>
 
-<!-- Sección de tiendas -->
-<div class="tiendas-wrapper">
-  <div class="out-now-banner">OUT NOW</div>
+  <!-- Sección de tiendas -->
+  <div class="tiendas-wrapper">
+    <div class="out-now-banner">OUT NOW</div>
 
-  <div class="tiendas-frame">
-    <div class="tiendas-inner">
-      <app-tiendas
-        store="GOG"
-        store_logo="assets/gog.png"
-        store_link="https://www.gog.com">
-      </app-tiendas>
+    <div class="tiendas-frame">
+      <div class="tiendas-inner">
+        <app-tiendas store="GOG" store_logo="assets/gog.png" store_link="https://www.gog.com">
+        </app-tiendas>
 
-      <app-tiendas
-        store="Steam"
-        store_logo="assets/steam-logo-black-transparent.png"
-        store_link="https://store.steampowered.com">
-      </app-tiendas>
+        <app-tiendas store="Steam" store_logo="assets/steam-logo-black-transparent.png"
+          store_link="https://store.steampowered.com">
+        </app-tiendas>
+      </div>
     </div>
   </div>
 </div>
-</body>
-
-

@@ -1,4 +1,8 @@
-<app-dropdown-selector label="Enemy" [options]="options"
-    (selection_change)="onOptionSelected($event)"></app-dropdown-selector>
-<app-stats-progress-bar name="Vida" [max_value]="100" [current_value]="50"></app-stats-progress-bar>
-<app-stats-progress-bar name="Defensa" [max_value]="100" [current_value]="50"></app-stats-progress-bar>
+<div>
+    <app-dropdown-selector label="Enemy" [options]="options" (selection_change)="onOptionSelected($event)"
+        [initial_value]="selected_enemy"></app-dropdown-selector>
+    <div class="mt-4">
+        <app-stats-progress-bar name="Health" [value]="selected_enemy.max_hp!"></app-stats-progress-bar>
+        <app-stats-progress-bar name="Armor" [value]="selected_enemy.armor!"></app-stats-progress-bar>
+    </div>
+</div>

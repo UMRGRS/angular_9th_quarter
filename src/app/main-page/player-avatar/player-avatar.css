@@ -1,3 +1,19 @@
+.title_container {
+  background-color: #000000;
+  transform: skew(25deg);
+  border: solid #ffffff;
+  padding: 15px 0px 5px 0px;
+}
+
+.title_font {
+  transform: skew(-25deg);
+  padding-bottom: 0px;
+  font-family: 'P5-menu';
+  font-size: xx-large;
+  flex: 1;
+  color: #ffffff;
+}
+
 .avatar-card {
   position: relative;
   display: inline-block;
@@ -5,7 +21,6 @@
   text-align: center;
   margin-top: 7%;
 }
-
 
 .avatar-frame {
   position: relative;
@@ -19,7 +34,6 @@
   width: fit-content;
 }
 
-
 .avatar-frame::before {
   content: '';
   position: absolute;
@@ -27,22 +41,20 @@
   left: 50%;
   width: 200%;
   height: 200%;
-  background: repeating-conic-gradient(
-    #ff0000 0deg 20deg,
-    #000 20deg 40deg
-  );
-  border-radius: 50%; 
+  background: repeating-conic-gradient(#ff0000 0deg 20deg,
+      #000 20deg 40deg);
+  border-radius: 50%;
   transform: translate(-50%, -50%);
-  animation: spin 45s linear infinite; 
+  animation: spin 45s linear infinite;
   z-index: 0;
   opacity: 0.5;
 }
-
 
 @keyframes spin {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
@@ -64,7 +76,7 @@
   width: auto;
   object-fit: cover;
   position: relative;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .player-name {
