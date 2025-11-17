@@ -95,7 +95,12 @@ export class DamageCalculator implements OnInit{
                         bonus_intelligence_damage + 
                         bonus_faith_damage;
 
-    this.total_damage = raw_damage - (raw_damage * MonsterArmorScalingTable.getValue(this.enemy.armor ?? 0));
+    const acc_one_buff = this.equipment.accessory_one?.damage_multiplier ?? 1;
+    const acc_two_buff = this.equipment.accessory_two?.damage_multiplier ?? 1;
+    
+    const buffed_raw_damage = raw_damage * acc_one_buff * acc_two_buff;
+
+    this.total_damage = buffed_raw_damage - (buffed_raw_damage * MonsterArmorScalingTable.getValue(this.enemy.armor ?? 0));
   }
 
   clearCalculator(){
